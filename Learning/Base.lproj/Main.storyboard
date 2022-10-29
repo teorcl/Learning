@@ -11,7 +11,7 @@
         <!--Inicio-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,7 +41,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="OlZ-kv-yqX" kind="presentation" modalPresentationStyle="fullScreen" id="CS2-mp-dV5"/>
+                                    <action selector="loginButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Ie-R7-nA0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zw7-5J-2xT">
@@ -71,6 +71,11 @@
                         <color key="backgroundColor" red="0.2196078431372549" green="0.34509803921568627" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Inicio" id="jLY-Uj-rBY"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="tOZ-et-bIY" id="pkP-cS-Ohu"/>
+                        <outlet property="passwordTextField" destination="a9E-rG-NKf" id="zoi-t5-blI"/>
+                        <segue destination="OlZ-kv-yqX" kind="presentation" identifier="home_segue" modalPresentationStyle="fullScreen" id="RJf-7v-cW2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="1482" y="68"/>
         </scene>
-        <!--    -->
+        <!--Ayuda-->
         <scene sceneID="Gm8-jZ-geO">
             <objects>
                 <viewController id="NVq-ja-zFV" sceneMemberID="viewController">
@@ -94,7 +99,7 @@
                         <viewLayoutGuide key="safeArea" id="paS-k0-dno"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="    " id="O9c-V8-6jE"/>
+                    <navigationItem key="navigationItem" title="Ayuda" id="O9c-V8-6jE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lpc-xO-09R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
