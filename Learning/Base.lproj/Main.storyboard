@@ -111,17 +111,19 @@
                         <outlet property="emailSwitch" destination="mek-jU-hrD" id="Qjf-g1-xAI"/>
                         <outlet property="emailTextField" destination="tOZ-et-bIY" id="pkP-cS-Ohu"/>
                         <outlet property="passwordTextField" destination="a9E-rG-NKf" id="zoi-t5-blI"/>
-                        <segue destination="EnX-I2-H5Z" kind="presentation" identifier="principal_segue" id="7rx-Zf-onE"/>
+                        <segue destination="EnX-I2-H5Z" kind="presentation" identifier="principal_segue" modalPresentationStyle="fullScreen" id="7rx-Zf-onE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="841.53846153846155" y="67.535545023696685"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--PrincipalScreen-->
         <scene sceneID="vew-hT-T6b">
             <objects>
-                <viewControllerPlaceholder id="EnX-I2-H5Z" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PrincipalScreen" id="EnX-I2-H5Z" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="j7G-Sk-b5U"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cff-gM-jkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1528" y="-39"/>
