@@ -33,7 +33,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a9E-rG-NKf">
                                         <rect key="frame" x="0.0" y="40" width="350" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSM-kc-jMb">
                                         <rect key="frame" x="0.0" y="80" width="350" height="31"/>
@@ -111,20 +111,20 @@
                         <outlet property="emailSwitch" destination="mek-jU-hrD" id="Qjf-g1-xAI"/>
                         <outlet property="emailTextField" destination="tOZ-et-bIY" id="pkP-cS-Ohu"/>
                         <outlet property="passwordTextField" destination="a9E-rG-NKf" id="zoi-t5-blI"/>
-                        <segue destination="OlZ-kv-yqX" kind="presentation" identifier="home_segue" modalPresentationStyle="fullScreen" id="RJf-7v-cW2"/>
+                        <segue destination="EnX-I2-H5Z" kind="presentation" identifier="principal_segue" id="7rx-Zf-onE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="841.53846153846155" y="67.535545023696685"/>
         </scene>
-        <!-- Home-->
-        <scene sceneID="lSl-0t-b3p">
+        <!--Storyboard Reference-->
+        <scene sceneID="vew-hT-T6b">
             <objects>
-                <viewControllerPlaceholder storyboardName=" Home" id="OlZ-kv-yqX" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jYP-3h-Yps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder id="EnX-I2-H5Z" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cff-gM-jkF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1482" y="68"/>
+            <point key="canvasLocation" x="1528" y="-39"/>
         </scene>
         <!--Ayuda-->
         <scene sceneID="Gm8-jZ-geO">
