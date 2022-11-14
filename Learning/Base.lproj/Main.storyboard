@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SYG-ZQ-Q8u">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SYG-ZQ-Q8u">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +23,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ALs-fF-fLr">
-                                <rect key="frame" x="20" y="301" width="350" height="137"/>
+                                <rect key="frame" x="20" y="301" width="350" height="174"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tOZ-et-bIY">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="34"/>
@@ -35,8 +35,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSM-kc-jMb">
+                                        <rect key="frame" x="0.0" y="80" width="350" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordar correo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf5-0a-Hc7">
+                                                <rect key="frame" x="0.0" y="0.0" width="301" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mek-jU-hrD">
+                                                <rect key="frame" x="301" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAf-A2-hS5">
-                                        <rect key="frame" x="0.0" y="80" width="350" height="57"/>
+                                        <rect key="frame" x="0.0" y="117" width="350" height="57"/>
                                         <color key="backgroundColor" white="1" alpha="0.20068444672578611" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="ybw-sr-Uor"/>
@@ -94,6 +108,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Inicio" id="jLY-Uj-rBY"/>
                     <connections>
+                        <outlet property="emailSwitch" destination="mek-jU-hrD" id="Qjf-g1-xAI"/>
                         <outlet property="emailTextField" destination="tOZ-et-bIY" id="pkP-cS-Ohu"/>
                         <outlet property="passwordTextField" destination="a9E-rG-NKf" id="zoi-t5-blI"/>
                         <segue destination="OlZ-kv-yqX" kind="presentation" identifier="home_segue" modalPresentationStyle="fullScreen" id="RJf-7v-cW2"/>
@@ -103,10 +118,10 @@
             </objects>
             <point key="canvasLocation" x="841.53846153846155" y="67.535545023696685"/>
         </scene>
-        <!--Home-->
+        <!-- Home-->
         <scene sceneID="lSl-0t-b3p">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="OlZ-kv-yqX" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName=" Home" id="OlZ-kv-yqX" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYP-3h-Yps" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1482" y="68"/>

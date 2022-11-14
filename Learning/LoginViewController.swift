@@ -12,10 +12,21 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailSwitch: UISwitch!
+    
+    private let storage = UserDefaults.standard
+    private let emailKey = "emailKey"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // De esta manera buscamos un string en los user defaults y lo asignamos.
+        if let storedEmail = storage.string(forKey: emailKey){
+            emailTextField.text = storedEmail
+            emailSwitch.isOn = true
+        }else{
+            emailSwitch.isOn = false
+        }
     }
     
     
@@ -24,7 +35,14 @@ class LoginViewController: UIViewController {
         let email = emailTextField.text
         let password = passwordTextField.text
         
-        if (email == "teo.calle.lara@gmail.com" && password == "123") {
+        // Si los valores anteriores fueran opcionales se deberían poner unwrapping
+        if email == "teo.calle.lara@gmail.com" && password == "123" {
+            if emailSwitch.isOn {
+                // Así es como guardamos valores en nuestros user defaults
+                storage.set(email, forKey: emailKey)
+            }else{
+                storage.removeObject(forKey: emailKey)
+            }
             print("Bienvenido")
             performSegue(withIdentifier: "home_segue", sender: nil)
         } else{
